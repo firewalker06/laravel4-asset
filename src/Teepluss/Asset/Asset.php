@@ -160,7 +160,7 @@ class Asset_Container {
 		// If a base asset URL is defined in the configuration, use that.
 		// This allows the delivery of assets through a different server 
 		// or third-party content delivery network.
-        if ($root = Config::get('app.asset_url', false))
+        if ($root = Config::get('asset::asset.url', false))
         {
                 return rtrim($root, '/').'/'.ltrim($source, '/');
         }
