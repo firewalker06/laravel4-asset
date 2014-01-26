@@ -183,6 +183,8 @@ class Asset_Container {
 
 		$attributes = (array) $attributes;
 
+		$source = $source . Config::get('asset::asset.batch');
+
 		$this->assets[$type][$name] = compact('source', 'dependencies', 'attributes');
 	}
 
